@@ -3,6 +3,7 @@ import './styles/app.css';
 
 import config from '../package.json'
 import * as styles from './index.css'
+
 /**
  * @constructor
  */

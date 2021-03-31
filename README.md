@@ -1,5 +1,21 @@
-## Parcel 1 or 2 and Tailwind 2 setup with Preact and TypeScript
-As almost 2021, most of current tutorials and guides on the internet of how to set up this combination are outdated. More so considering the latest iterations of Tailwind and Parcel that bumps the PostCSS version in use.
+# Parcel 2, Tailwind & Tailwind/jit with Preact and TypeScript
+<img style="text-align: center" src="https://i.imgur.com/xHlol6w.png"/>
 
-To use Parcel 1, just downgrade the version of "parcel", in ``package.json`` to one, works exactly the same.
- 
+## Why
+We are in 2021, and it is almost impossible to find an entire functional project with this configuration and working as expected.
+
+The problems you may encounter in Parcel 2 are related to transpilation (it uses Babel, and you must force it to use `tsc` otherwise it skips `tsconfig.js`) as well as problems with PostCSS versions (Tailwind requires version 8).
+
+Also, Preact presents complexity with aliases.
+
+This project brings all these tools together:
+
+- parcel: "^2.0.0-nightly.632"
+- tailwindcss: "^2.0.4"
+- @tailwindcss/jit: "^0.1.17"
+- typescript: "^4.2.3"
+- preact: "^10.5.13"
+
+## How
+
+To get started run `yarn start`.
