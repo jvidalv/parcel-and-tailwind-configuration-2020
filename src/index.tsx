@@ -1,18 +1,41 @@
-import { h, render } from 'preact';
-import {Button} from "./components/atoms/button/button";
+import {h, render} from 'preact';
+import './styles/app.css';
 
+import config from '../package.json'
+import * as styles from './index.css'
+/**
+ * @constructor
+ */
 const App = () => {
     return (
-        <div className="container text-center mx-auto bg-yellow-100 rounded-lg my-8 py-12">
-            <h1 className="text-5xl mb-12">Hello from Parcel and Tailwind!</h1>
-            <p className="text-xl mb-12 w-3/6 mx-auto">
-                This project has <b>Parcel ^2.X.X</b> with <b>Tailwind ^2.X.X</b> working. Thanks to :global in ./index.pcss you can use
-                tailwind classes everywhere, and thanks to "css-modules" you also can use .pcss locally and import
-                the styles per file.
-            </p>
-            <Button>Hover me, click me and leave area or make the page smaller!</Button>
-        </div>
+        <main className={styles.main}>
+            <div className={styles.content}>
+                <h1 className={styles.title}>
+                    <span>Configuration for</span>
+                    <span>Parcel, Tailwind, Preact & TypeScript</span>
+                </h1>
+                <ul className={styles.deps}>
+                    <li>Parcel <span>{config.devDependencies.parcel}</span></li>
+                    <li>Tailwind & Tailwind/jit <span>{config.devDependencies.tailwindcss} & {config.devDependencies["@tailwindcss/jit"]}</span></li>
+                    <li>Preact <span>{config.dependencies.preact}</span></li>
+                    <li>TypeScript <span>{config.devDependencies.typescript}</span></li>
+                </ul>
+                <div className={styles.buttons}>
+                    <div className={styles.web}>
+                        <a href="https://josepvidal.dev">
+                            My Webpage
+                        </a>
+                    </div>
+                    <div className={styles.github}>
+                        <a href="https://github.com/jvidalv">
+                            Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
     )
 }
 
-render(<App />, document.getElementById('root'));
+render(<App/>, document.getElementById('root'));

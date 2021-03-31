@@ -3,13 +3,14 @@
     "outDir": "./dist",
     "sourceMap": true,
     "noImplicitAny": true,
-    "module": "es6",
-    "moduleResolution": "node",
-    "target": "es6",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ESNext",
     "jsx": "react",
     "jsxFactory": "h",
-    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports" : true
   },
-  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
-  "exclude": ["**/*.pcss"]
+  "include": ["src/**/*"],
+  "exclude": ["**/*.css"]
 }
