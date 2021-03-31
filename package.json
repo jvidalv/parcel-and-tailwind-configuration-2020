@@ -1,5 +1,5 @@
 {
-  "name": "parcel-tailwind-preact-postcss-config-2021",
+  "name": "parcel2-tailwind-preact-typescript-example-2021",
   "version": "2.0.0",
   "license": "MIT",
   "source": "public/index.html",
@@ -7,6 +7,10 @@
     "start": "parcel serve public/index.html",
     "start:clean": "(rm -r dist || true && rm -r .parcel-cache || true) && parcel serve public/index.html",
     "build": "parcel build public/index.html"
+  },
+  "browserslist": ["> 0.2%", "not dead"],
+  "targets": {
+    "app": {}
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",
